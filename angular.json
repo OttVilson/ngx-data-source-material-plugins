@@ -1,7 +1,42 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "4241505b-85ef-467f-b39d-8db514b3180e"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-data-source-material-plugins": {
+      "projectType": "library",
+      "root": "projects/ngx-data-source-material-plugins",
+      "sourceRoot": "projects/ngx-data-source-material-plugins/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-data-source-material-plugins/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-data-source-material-plugins/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-data-source-material-plugins/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-data-source-material-plugins/src/test.ts",
+            "tsConfig": "projects/ngx-data-source-material-plugins/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-data-source-material-plugins/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-data-source-material-plugins"
 }

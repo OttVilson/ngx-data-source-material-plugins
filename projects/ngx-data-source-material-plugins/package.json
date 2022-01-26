@@ -1,0 +1,14 @@
+{
+  "name": "ngx-data-source-material-plugins",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "@angular/cdk": "^13.1.3",
+    "@angular/material": "^13.1.3",
+    "ngx-data-sourcce": "^0.0.1"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
