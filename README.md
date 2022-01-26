@@ -21,4 +21,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
       "*": ["node_modules/*", "*"]
     },
 ```
-to tsconfig.json file under `compilerOptions`. See also Scenario 1 in https://github.com/microsoft/TypeScript/issues/8346.
+to `compilerOptions` in tsconfig.json file of the project where the library is to be used. See also Scenario 1 in https://github.com/microsoft/TypeScript/issues/8346.
