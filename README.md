@@ -1,27 +1,24 @@
 # NgxDataSourceMaterialPlugins
 
+This library helps to connect [ngx-data-source](https://github.com/OttVilson/ngx-data-source) to instances of Angular Material (MatSort)[https://material.angular.io/components/sort/api#MatSort] and [MatPaginator](https://material.angular.io/components/paginator/api#MatPaginator).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# How to use
+* clone the repository via `git clone git@github.com:OttVilson/ngx-data-source-material-plugins.git`
+* navigate to `cd ngx-data-source-material-plugins`
+* run `npm install`
+* run `npm link ngx-data-source` (this step assumes a local build of [ngx-data-source](https://github.com/OttVilson/ngx-data-source) has been exposed via npm link)
+* run `ng build`
+* navigate to `cd ./dist/ngx-data-source-material-plugins`
+* run `npm link`
+* navigate to the project where you intend to use the library
+* run `npm link ngx-data-source-material-plugins` (as well as `npm link ngx-data-source`)
+* note that since you are dealing with symlinks you are probably going to have a clash for MatSort and MatPaginator; this can be avoided by adding 
+```
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*", "*"]
+    },
+```
+to tsconfig.json file under `compilerOptions`. See also Scenario 1 in https://github.com/microsoft/TypeScript/issues/8346.
