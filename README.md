@@ -1,6 +1,6 @@
 # NgxDataSourceMaterialPlugins
 
-This library helps to connect [ngx-data-source](https://github.com/OttVilson/ngx-data-source) to instances of Angular Material [MatSort](https://material.angular.io/components/sort/api#MatSort) and [MatPaginator](https://material.angular.io/components/paginator/api#MatPaginator).
+This library helps to connect instances of Angular Material [MatSort](https://material.angular.io/components/sort/api#MatSort) and [MatPaginator](https://material.angular.io/components/paginator/api#MatPaginator) to [ngx-data-source](https://github.com/OttVilson/ngx-data-source).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
