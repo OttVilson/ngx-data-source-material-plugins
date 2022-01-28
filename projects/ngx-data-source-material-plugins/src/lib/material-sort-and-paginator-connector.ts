@@ -5,7 +5,7 @@ import { NgxDataSource, SortFT } from "ngx-data-source";
 import { MaterialPaginatorConnector } from "./material-paginator-connector";
 import { CompareFunctions, extractEventStreamFromSorts } from "./plugins-for-sort";
 
-export class MaterialSortAndPaginatorConnector<T, F> {
+export class MaterialSortAndPaginatorConnector<T, F = keyof T> {
 
     private paginatorConnector: MaterialPaginatorConnector<T, F> | undefined = undefined
 
